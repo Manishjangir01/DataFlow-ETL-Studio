@@ -1,6 +1,6 @@
 # DataFlow ETL Studio
 
-[![tests](https://github.com/Manishjangir01/dataflow-etl-studio/actions/workflows/tests.yml/badge.svg)](https://github.com/Manishjangir01/dataflow-etl-studio/actions/workflows/tests.yml)
+[![tests](https://github.com/Manishjangir01/DataFlow-ETL-Studio/actions/workflows/tests.yml/badge.svg)](https://github.com/Manishjangir01/DataFlow-ETL-Studio/actions/workflows/tests.yml)
 ![Python](https://img.shields.io/badge/python-3.12%20%7C%203.13-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
