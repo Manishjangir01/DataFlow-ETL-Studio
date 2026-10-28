@@ -1,0 +1,70 @@
+# DataFlow ETL Studio with PostgreSQL
+#
+#   1. Copy-Item .env.example .env        (or: cp .env.example .env)
+#   2. In .env set POSTGRES_PASSWORD and DATAFLOW_SECRET_KEY (python -m src.cli generate-key)
+#   3. docker compose up -d --build
+#   4. Open http://localhost:8501
+#
+# Services:
+#   postgres - PostgreSQL 16: "dataflow" database (metadata) + "warehouse" database (load target)
+#   app      - the Streamlit web UI (schedules are NOT run here)
+#   worker   - the scheduler worker that runs scheduled pipelines
+
+x-dataflow-env: &dataflow-env
+  DATAFLOW_DATABASE_URL: postgresql+psycopg://dataflow:${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}@postgres:5432/dataflow
+  WAREHOUSE_PG_URL: postgresql+psycopg://dataflow:${POSTGRES_PASSWORD}@postgres:5432/warehouse
+  DATAFLOW_SECRET_KEY: ${DATAFLOW_SECRET_KEY:?Set DATAFLOW_SECRET_KEY in .env (python -m src.cli generate-key)}
+  DATAFLOW_EMBEDDED_SCHEDULER: "false"
+  DATAFLOW_TIMEZONE: ${DATAFLOW_TIMEZONE:-UTC}
+  DATAFLOW_ALLOWED_DOMAINS: ${DATAFLOW_ALLOWED_DOMAINS:-}
+  DATAFLOW_ALLOW_HTTP: ${DATAFLOW_ALLOW_HTTP:-false}
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: dataflow
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+      POSTGRES_DB: dataflow
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./docker/postgres-init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U dataflow -d dataflow"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    # Not published to the host by default. Uncomment to connect from Windows tools:
+    # ports:
+    #   - "5432:5432"
+
+  app:
+    build: .
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment: *dataflow-env
+    ports:
+      - "8501:8501"
+    volumes:
+      - appdata:/app/data
+      - applogs:/app/logs
+
+  worker:
+    build: .
+    restart: unless-stopped
+    command: ["python", "-m", "src.orchestration.worker"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment: *dataflow-env
+    volumes:
+      - appdata:/app/data
+      - applogs:/app/logs
+
+volumes:
+  pgdata:
+  appdata:
+  applogs:

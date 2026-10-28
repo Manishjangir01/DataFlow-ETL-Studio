@@ -1,0 +1,20 @@
+# DataFlow ETL Studio - runtime and test dependencies
+# Supported Python: 3.12 and 3.13 (64-bit). Tested versions are noted on the right.
+
+streamlit>=1.62,<2            # tested 1.62.0 and 1.66.1
+pandas>=2.2,<3                # tested 2.2.3 and 2.3.3
+numpy>=1.26,<3                # tested 2.x
+pyarrow>=16                   # tested 26.0.0 (Parquet support)
+requests>=2.32,<3             # tested 2.34.2
+urllib3>=2.2,<3               # tested 2.8.0 (used by the SSRF-safe HTTP adapter)
+SQLAlchemy>=2.0.30,<2.2       # tested 2.0.55 and 2.1.6
+psycopg[binary]>=3.2,<4       # tested 3.3.6 (PostgreSQL driver, binary wheels for Windows)
+pydantic>=2.7,<3              # tested 2.7.4 and 2.14.1
+cryptography>=42              # tested 50.0.2 (Fernet encryption for stored secrets)
+python-dotenv>=1.0            # tested 1.2.4
+APScheduler>=3.10,<4          # tested 3.10.4 and 3.11.3
+tzdata>=2024.1                # time zone database (required on Windows)
+
+# Testing
+pytest>=8                     # tested 9.1.1
+responses>=0.25               # tested 0.26.3 (mocked HTTP for the API tests)

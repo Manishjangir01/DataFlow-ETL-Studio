@@ -1,0 +1,17 @@
+[server]
+# Maximum upload size in MB (keep in line with DATAFLOW_MAX_UPLOAD_MB)
+maxUploadSize = 200
+headless = true
+
+[browser]
+gatherUsageStats = false
+
+[theme]
+primaryColor = "#2563eb"
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#f4f6fb"
+textColor = "#111827"
+
+[client]
+showSidebarNavigation = true
+toolbarMode = "minimal"

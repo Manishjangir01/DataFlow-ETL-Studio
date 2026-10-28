@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Secrets and local configuration - NEVER commit these
+.env
+.env.*
+!.env.example
+config/secret.key
+.streamlit/secrets.toml
+
+# Runtime data (databases, uploads, outputs, run artifacts, logs)
+data/*.db
+data/*.db-*
+data/databases/*
+!data/databases/.gitkeep
+data/uploads/*
+!data/uploads/.gitkeep
+data/output/*
+!data/output/.gitkeep
+data/runs/*
+!data/runs/.gitkeep
+logs/*.log
+logs/runs/*
+!logs/runs/.gitkeep
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

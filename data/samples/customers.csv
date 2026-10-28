@@ -1,0 +1,22 @@
+customer_id,first_name,last_name,email,country,signup_date,status,lifetime_value,age
+1001,  alice ,Johnson,alice.johnson@example.com,india,2024-01-15,active,1250.50,34
+1002,Bob,SMITH,bob.smith@example.com,USA,15/02/2024,Active,890.00,41
+1003,carol,Williams,carol.w@example.com,united kingdom,2024-03-02,inactive,,29
+1004,David,Brown,not-an-email,India,2024-03-18,active,430.25,
+1005,Eve,Davis,eve.davis@example.com,  usa  ,2024-04-01,ACTIVE,2100.00,52
+1006,Frank,Miller,frank.miller@example.com,Canada,not a date,pending,75.10,23
+1007,Grace,Wilson,grace.wilson@example.com,india,2024-05-12,active,980.00,37
+1008,Henry,Moore,,Germany,2024-05-20,inactive,0,45
+1009,Isabel,Taylor,isabel.t@example.com,Spain,2024-06-03,active,1540.75,31
+1010,Jack,Anderson,jack.anderson@example.com,USA,2024-06-15,active,-50.00,28
+1002,Bob,SMITH,bob.smith@example.com,USA,15/02/2024,Active,890.00,41
+1011,Karen,Thomas,karen.thomas@example.com,India,2024-07-01,active,660.40,39
+1012,Leo,Jackson,leo.jackson@example.com,france,2024-07-19,pending,,26
+1013,Mia,White,mia.white@example.com,USA,2024-08-08,active,3200.00,48
+1014,Noah,Harris,noah.harris@example.com,India,2024-08-21,inactive,120.00,thirty
+1015,  Olivia,Martin,olivia.martin@example.com,Canada,2024-09-10,active,845.60,33
+1016,Paul,Thompson,paul.thompson@example.com,UK,2024-09-25,active,410.00,57
+1017,Quinn,Garcia,quinn.garcia@example.com,Mexico,2024-10-03,active,1999.99,30
+1018,Rita,Martinez,rita.m@example.com,india,2024-10-17,pending,55.00,22
+1019,Sam,Robinson,sam.robinson@example.com,USA,2024-11-02,active,720.00,44
+1020,Tina,Clark,tina.clark@example.com,Germany,2024-11-20,inactive,310.30,36

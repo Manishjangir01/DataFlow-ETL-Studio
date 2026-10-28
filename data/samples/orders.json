@@ -1,0 +1,24 @@
+{
+  "meta": {
+    "source": "DataFlow sample shop",
+    "generated_at": "2026-10-01T09:00:00Z",
+    "page": 1,
+    "total": 12
+  },
+  "data": {
+    "orders": [
+      {"order_id": "ORD-1001", "order_date": "2026-09-01T10:15:00Z", "status": "shipped", "customer": {"id": 1001, "name": "Alice Johnson", "address": {"city": "Mumbai", "country": "IN"}}, "items": [{"sku": "SKU-1", "qty": 2}], "total": {"amount": 59.98, "currency": "USD"}, "coupon": null},
+      {"order_id": "ORD-1002", "order_date": "2026-09-01T11:40:00Z", "status": "delivered", "customer": {"id": 1002, "name": "Bob Smith", "address": {"city": "Austin", "country": "US"}}, "items": [{"sku": "SKU-7", "qty": 1}], "total": {"amount": 120.00, "currency": "USD"}, "coupon": "FALL10"},
+      {"order_id": "ORD-1003", "order_date": "2026-09-02T08:05:00Z", "status": "cancelled", "customer": {"id": 1003, "name": "Carol Williams", "address": {"city": "Leeds", "country": "GB"}}, "items": [], "total": {"amount": 0, "currency": "GBP"}, "coupon": null},
+      {"order_id": "ORD-1004", "order_date": "2026-09-03T16:22:00Z", "status": "shipped", "customer": {"id": 1004, "name": "David Brown", "address": {"city": "Pune", "country": "IN"}}, "items": [{"sku": "SKU-2", "qty": 3}, {"sku": "SKU-5", "qty": 1}], "total": {"amount": 210.50, "currency": "INR"}, "coupon": null},
+      {"order_id": "ORD-1005", "order_date": "2026-09-04T19:00:00Z", "status": "delivered", "customer": {"id": 1005, "name": "Eve Davis", "address": {"city": "Denver", "country": "US"}}, "items": [{"sku": "SKU-3", "qty": 1}], "total": {"amount": 75.25, "currency": "USD"}, "coupon": null},
+      {"order_id": "ORD-1006", "order_date": "2026-09-05T07:45:00Z", "status": "processing", "customer": {"id": 1006, "name": "Frank Miller", "address": {"city": "Toronto", "country": "CA"}}, "items": [{"sku": "SKU-9", "qty": 4}], "total": {"amount": 320.00, "currency": "CAD"}, "coupon": "WELCOME"},
+      {"order_id": "ORD-1007", "order_date": "invalid-date", "status": "shipped", "customer": {"id": 1007, "name": "Grace Wilson", "address": {"city": "Delhi", "country": "IN"}}, "items": [{"sku": "SKU-1", "qty": 1}], "total": {"amount": 29.99, "currency": "USD"}, "coupon": null},
+      {"order_id": "ORD-1008", "order_date": "2026-09-06T12:30:00Z", "status": "delivered", "customer": {"id": 1008, "name": "Henry Moore", "address": {"city": "Berlin", "country": "DE"}}, "items": [{"sku": "SKU-4", "qty": 2}], "total": {"amount": -15.00, "currency": "EUR"}, "coupon": null},
+      {"order_id": "ORD-1009", "order_date": "2026-09-07T09:10:00Z", "status": "shipped", "customer": {"id": 1009, "name": "Isabel Taylor", "address": {"city": "Madrid", "country": "ES"}}, "items": [{"sku": "SKU-6", "qty": 1}], "total": {"amount": 88.00, "currency": "EUR"}, "coupon": null},
+      {"order_id": "ORD-1010", "order_date": "2026-09-08T14:55:00Z", "status": "delivered", "customer": {"id": 1010, "name": "Jack Anderson", "address": {"city": "Seattle", "country": "US"}}, "items": [{"sku": "SKU-8", "qty": 5}], "total": {"amount": 499.95, "currency": "USD"}, "coupon": "VIP"},
+      {"order_id": "ORD-1010", "order_date": "2026-09-08T14:55:00Z", "status": "delivered", "customer": {"id": 1010, "name": "Jack Anderson", "address": {"city": "Seattle", "country": "US"}}, "items": [{"sku": "SKU-8", "qty": 5}], "total": {"amount": 499.95, "currency": "USD"}, "coupon": "VIP"},
+      {"order_id": "ORD-1011", "order_date": "2026-09-09T18:20:00Z", "status": null, "customer": {"id": 1011, "name": "Karen Thomas", "address": {"city": "Chennai", "country": "IN"}}, "items": [{"sku": "SKU-2", "qty": 1}], "total": {"amount": 45.00, "currency": "INR"}, "coupon": null}
+    ]
+  }
+}
