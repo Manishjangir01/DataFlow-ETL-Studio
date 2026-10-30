@@ -4,6 +4,8 @@
 ![Python](https://img.shields.io/badge/python-3.12%20%7C%203.13-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
+![DataFlow ETL Studio](docs/social-preview.png)
+
 > No-code ETL in the browser: extract from REST APIs or files, clean and validate the data, load it into CSV, Parquet, SQLite or PostgreSQL.
 
 *Built with guidance from an AI mentor.*
